@@ -1,2 +1,5 @@
-# custom-image-template
-Template repo to generate a custom image for UniNuvola
+# Custom Image Template 
+
+ ```ghcr.io/fabriziogrosso/base-with-sudo:main``` 
+
+

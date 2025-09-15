@@ -7,6 +7,7 @@ USER root
 
 # INSTALL OLLAMA
 RUN curl -fsSL https://ollama.com/install.sh | sh
+RUN pip install ollama
 
 # RUN OLLAMA SERVE AND PULL MODELS
 COPY ./run-ollama.sh /tmp/run-ollama.sh

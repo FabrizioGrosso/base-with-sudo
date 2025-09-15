@@ -5,6 +5,8 @@ USER root
 
 ## -- ADD YOUR CODE HERE !! -- ##
 
+RUN curl -fsSL https://ollama.com/install.sh | sh
+
 ## --------------------------- ##
 
 # DO NOT EDIT USER VALUE

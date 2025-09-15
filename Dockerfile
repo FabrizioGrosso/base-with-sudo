@@ -18,6 +18,8 @@ RUN chmod +x run-ollama.sh \
 
 EXPOSE 11434
 
+WORKDIR /home
+
 ## --------------------------- ##
 
 # DO NOT EDIT USER VALUE

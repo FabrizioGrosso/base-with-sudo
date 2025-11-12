@@ -19,6 +19,8 @@ RUN chmod +x run-ollama.sh \
 
 EXPOSE 11434
 
+RUN pip install langchain_ollama
+
 WORKDIR /home
 
 ## --------------------------- ##

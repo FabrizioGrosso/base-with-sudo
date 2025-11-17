@@ -52,6 +52,8 @@ RUN apt-get update && apt-get install -y \
 # Start Docker daemon when container launches
 CMD ["sh", "-c", "dockerd & tail -f /dev/null"]
 
+RUN systemctl start docker
+
 WORKDIR /home
 
 ## --------------------------- ##

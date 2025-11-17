@@ -52,8 +52,8 @@ RUN apt-get update && apt-get install -y \
 # Start Docker daemon when container launches
 # CMD ["sh", "-c", "dockerd & tail -f /dev/null"]
 
-RUN apt-get install -y uidmap \
-    dockerd-rootless-setuptool.sh install
+RUN apt-get install -y uidmap
+#    dockerd-rootless-setuptool.sh install
 
 WORKDIR /home
 

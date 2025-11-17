@@ -50,9 +50,10 @@ RUN apt-get update && apt-get install -y \
     docker-compose-plugin
 
 # Start Docker daemon when container launches
-CMD ["sh", "-c", "dockerd & tail -f /dev/null"]
+# CMD ["sh", "-c", "dockerd & tail -f /dev/null"]
 
-RUN sudo systemctl start docker
+RUN apt-get install -y uidmap
+    dockerd-rootless-setuptool.sh install
 
 WORKDIR /home
 

@@ -56,6 +56,8 @@ CMD ["sh", "-c", "dockerd & tail -f /dev/null"]
 #    dockerd-rootless-setuptool.sh install
 
 # Install nvidia-container-toolkit
+ENV NVIDIA_VISIBLE_DEVICES all
+ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
 RUN apt-get update && apt-get install -y --no-install-recommends \
    curl \
    gnupg2

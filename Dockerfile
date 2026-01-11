@@ -55,6 +55,9 @@ CMD ["sh", "-c", "dockerd & tail -f /dev/null"]
 # RUN dockerd
 #    dockerd-rootless-setuptool.sh install
 
+# Install nvidia-container-toolkit
+RUN apt-get install -y nvidia-container-toolkit
+
 WORKDIR /home
 
 ## --------------------------- ##

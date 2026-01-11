@@ -31,27 +31,27 @@ RUN apt-get update && apt-get install -y \
     software-properties-common
 
 # Add Docker’s official GPG key
-RUN mkdir -p /etc/apt/keyrings \
-    && curl -fsSL https://download.docker.com/linux/ubuntu/gpg \
-        | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+#RUN mkdir -p /etc/apt/keyrings \
+#    && curl -fsSL https://download.docker.com/linux/ubuntu/gpg \
+#        | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
 # Add Docker repository
-RUN echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
-  https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
-  > /etc/apt/sources.list.d/docker.list
+#RUN echo \
+#  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
+#  https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
+#  > /etc/apt/sources.list.d/docker.list
 
 # Install Docker Engine
-RUN apt-get update && apt-get install -y \
-    docker-ce \
-    docker-ce-cli \
-    containerd.io \
-    docker-buildx-plugin \
-    docker-compose-plugin
+#RUN apt-get update && apt-get install -y \
+#    docker-ce \
+#    docker-ce-cli \
+#    containerd.io \
+#    docker-buildx-plugin \
+#    docker-compose-plugin
 
-RUN apt-get install -y uidmap
+#RUN apt-get install -y uidmap
 # Start Docker daemon when container launches
-CMD ["sh", "-c", "dockerd & tail -f /dev/null"]
+#CMD ["sh", "-c", "dockerd & tail -f /dev/null"]
 # RUN dockerd
 #    dockerd-rootless-setuptool.sh install
 

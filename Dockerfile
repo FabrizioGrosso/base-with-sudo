@@ -7,28 +7,28 @@ USER root
 
 # INSTALL OLLAMA
 RUN curl -fsSL https://ollama.com/install.sh | sh
-RUN pip install ollama
+#RUN pip install ollama
 
 # RUN OLLAMA SERVE AND PULL MODELS
-COPY ./run-ollama.sh /tmp/run-ollama.sh
+#COPY ./run-ollama.sh /tmp/run-ollama.sh
 
-WORKDIR /tmp
+#WORKDIR /tmp
 
-RUN chmod +x run-ollama.sh \
-    && ./run-ollama.sh
+#RUN chmod +x run-ollama.sh \
+#    && ./run-ollama.sh
 
-EXPOSE 11434
+#EXPOSE 11434
 
-RUN pip install langchain_ollama
+#RUN pip install langchain_ollama
 
 # Install required packages
-RUN apt-get update && apt-get install -y \
-    ca-certificates \
-    curl \
-    gnupg \
-    lsb-release \
-    apt-transport-https \
-    software-properties-common
+#RUN apt-get update && apt-get install -y \
+#    ca-certificates \
+#    curl \
+#    gnupg \
+#    lsb-release \
+#    apt-transport-https \
+#    software-properties-common
 
 # Add Docker’s official GPG key
 #RUN mkdir -p /etc/apt/keyrings \

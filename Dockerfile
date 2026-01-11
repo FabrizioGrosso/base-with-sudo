@@ -56,7 +56,12 @@ CMD ["sh", "-c", "dockerd & tail -f /dev/null"]
 #    dockerd-rootless-setuptool.sh install
 
 # Install nvidia-container-toolkit
-RUN apt-get install -y nvidia-container-toolkit
+RUN apt-get update && apt-get install -y \
+    software-properties-common \
+    && add-apt-repository universe \
+    && apt-get install -y \
+    nvidia-container-toolkit \
+    && rm -rf /var/lib/apt/lists/* # Clean up to reduce image size
 
 WORKDIR /home
 

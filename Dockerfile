@@ -55,6 +55,8 @@ RUN curl -fsSL https://ollama.com/install.sh | sh
 # RUN dockerd
 #    dockerd-rootless-setuptool.sh install
 
+RUN apt-get install nvtop
+
 
 WORKDIR /home
 

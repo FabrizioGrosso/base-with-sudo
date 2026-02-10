@@ -57,6 +57,8 @@ RUN curl -fsSL https://ollama.com/install.sh | sh
 
 RUN apt-get install nvtop
 
+CMD ["/bin/bash"]
+
 
 WORKDIR /home
 
